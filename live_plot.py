@@ -21,7 +21,7 @@ from SerialData.SerialData import SerialData
 
 
 ### Set up the serial connection (adjust the COM port and baud rate according to your configuration)
-serialData = SerialData('/dev/ttyACM0')
+serialData = SerialData('COM2')
 
 ### Set a data function, default is lambda _data: _data
 # data_function = lambda _data: 1 / _data
