@@ -21,7 +21,7 @@ from SerialData.SerialData import SerialData
 
 
 ### Set up the serial connection (adjust the COM port and baud rate according to your configuration)
-serialData = SerialData('COM2')
+serialData = SerialData('/dev/ttyACM0')
 
 ### Set a data function, default is lambda _data: _data
 # data_function = lambda _data: 1 / _data
@@ -106,7 +106,7 @@ def update_plot(_):
             line.set_ydata(y)
 
             #   
-            ax.set_ylim(_data.min_forever_scaled_array().T[i], _data.max_forever_scaled_array().T[i])
+            ax.set_ylim(0.95* _data.min_forever_scaled_array().T[i], 1.05 * _data.max_forever_scaled_array().T[i])
 
         # Update limits
         plt.xlim(x_start, serialData._counter + 1)
