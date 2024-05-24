@@ -20,7 +20,7 @@ from matplotlib.animation import FuncAnimation
 from SerialData.SerialData import SerialData
 
 
-### Set up the serial connection (adjust the COM port and baud rate according to your configuration)
+### Set up the serial connection (adjust the COM port and baud rate according to your system configuration)
 serialData = SerialData('/dev/ttyACM0')
 
 ### Set a data function, default is lambda _data: _data
