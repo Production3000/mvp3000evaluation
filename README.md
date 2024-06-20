@@ -8,7 +8,7 @@ A key feature of the framework is the seamless transition between the different 
 
 The framework comprises three main repositories:
 1.  **[MVP3000 ESP32/ESP8266](https://github.com/Production3000/mvp3000esp)** written in C++. It offers a web interface for main settings including data processing such as averaging, offset, and scaling, as well as data transfer options via serial interface or wireless to a MQTT broker.
-2.  **[MVP3000 Controller](https://github.com/Production3000/mvp3000controller)**. Designed to run on a Raspberry Pi or a dedicated computer, this repository supports long-term data collection and demonstration capabilities independent of an engineer's laptop. It acts as MQTT broker and stores the recieved data in a MariaDB table. It includes a web kiosk interface for modern, touch-based user interactions.
+2.  **[MVP3000 Controller](https://github.com/Production3000/mvp3000controller)**. Designed to run on a Raspberry Pi or a dedicated computer, this repository supports long-term data collection and demonstration capabilities independent of an engineer's laptop. It acts as MQTT broker and stores the received data in a MariaDB table. It includes a web kiosk interface for modern, touch-based user interactions.
 3.  **MVP3000 Evaluation** written in Python. The class receives data either via the serial interface or from the MQTT broker and allows basic processing such as averaging, offset, and scaling on the client side. It includes a number of scripts to display the data, record single or repeated or continuous measurements, and to perform basic standard analysis.
 
 
@@ -58,7 +58,7 @@ Initialize the class and start monitoring the serial port. Optionally provide an
 
 #### Data Function
 
-Set a data function to be is applied before anything else. This is usefull when for example the reciprocal of the recieved data is to be used.
+Set a data function to be is applied before anything else. This is usefull when for example the reciprocal of the received data is to be used.
 
     data_function = lambda _data: 1 / _data
     serialData.set_data_function(data_function)
